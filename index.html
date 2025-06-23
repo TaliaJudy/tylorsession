@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The best picture gallery on the web" />
+  <title>Cytra Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Cytra Gallery</h1>
+    <p>Browse an epic collection of beautiful pictures.</p>
+  </header>
+
+  <section class="controls">
+    <input type="text" id="searchInput" placeholder="Search images...">
+    <input type="file" id="fileInput" multiple accept="image/*">
+    <button id="uploadBtn">Upload</button>
+  </section>
+
+  <main class="gallery">
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Images loaded dynamically from Firebase -->
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+  </div>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>
